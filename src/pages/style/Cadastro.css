@@ -1,50 +1,111 @@
-/* src/pages/Cadastro.css */
+/* src/style/Cadastro.css */
 
 .cadastro-container {
-    max-width: 400px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .cadastro-form {
-    display: flex;
+  display: flex;
+  height: auto; /* Ajusta a altura conforme necessário */
+  background: url('./img/fundostatic.png') no-repeat center center fixed; /* Altere para a imagem desejada */
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 190px; /* Adiciona a margem superior */
+  margin-bottom: 190px; /* Adiciona a margem inferior */
+}
+
+.cadastro-form-container {
+  background: rgba(255, 102, 0, 0.95); /* Cor laranja com opacidade */
+  width: 35%; /* Ajuste a largura para ficar mais próxima ao protótipo */
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  margin-bottom: 1rem;
+}
+
+.logo-img {
+  width: 180px; /* Ajuste o tamanho da logo */
+}
+
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.btn-cadastrar {
+  background-color: #ffcc00; /* Amarelo para o botão de cadastrar */
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-cadastrar:hover {
+  background-color: #e6b800;
+}
+
+.cadastro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.image-lateral {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 80vh; /* Limita a altura para evitar que fique desproporcional */
+  border-radius: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 490px) {
+  .cadastro-container {
     flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    margin-top: 50px; /* Ajusta a margem para telas menores */
+    margin-bottom: 50px; /* Ajusta a margem para telas menores */
   }
-  
-  .form-group {
-    margin-bottom: 1rem;
+
+  .cadastro-form-container {
+    width: 90%;
+    margin: auto;
+    background: rgba(255, 102, 0, 0.95);
   }
-  
-  .form-group label {
-    margin-bottom: 0.5rem;
-    display: block;
-    font-weight: bold;
-    text-align: left;
+
+  .cadastro-image {
+    display: none; /* Esconde a imagem lateral em telas menores */
   }
-  
-  .form-group input,
-  .form-group select {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .btn-cadastrar {
-    background-color: #ff6600; /* Laranja para o botão de cadastro */
-    color: #fff;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  .btn-cadastrar:hover {
-    background-color: #e65a00;
-  }
-  
+}
